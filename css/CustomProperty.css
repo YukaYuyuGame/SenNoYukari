@@ -1,0 +1,85 @@
+@charset 'UTF-8';
+
+/* Font */
+@font-face {
+	font-family: 'UtsukushiFont';
+	src: url('../resources/UtsukushiFONT.otf') format('opentype');
+}
+
+/* Style */
+:root {
+	--SPSwitchingWidth: 480px;
+	--PCSwitchingWidth: 481px;
+
+	/* --------------------[形情報]-------------------- */
+	--Backdrop_Blur: blur(4px);
+	--Shape_Radius: 12px;
+	--Control_Border: 1.5px solid var(--C004_MBorder1);
+	--Control_Width: 400px;
+
+	/* --------------------[影情報]-------------------- */
+	--Shadow_Normal_light: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+	--Shadow_Hover_light: 0px 1px 2px 0.25px rgba(13, 0, 21, 0.5);
+
+	--Shadow_Normal_dark: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+	--Shadow_Hover_dark: 0px 1px 2px 0.25px rgba(13, 0, 21, 0.5);
+
+	--Shadow_NotHover: 0px 0px 0px 0px var(--C115_Shikkoku);
+
+	/* --------------------[色情報]-------------------- */
+	/* Color0xx : Mizuho Colors */
+	--C001_MFashion: rgb(251, 247, 232); /* 			上半身の服						 */
+	--C002_MRibbon1: rgb(42, 34, 18); /* 				お腹のリボン					 */
+	--C002_MRibbon2: rgb(84, 75, 46); /* 				お腹のリボン					 */
+	--C003_MRibbon3H: rgb(54, 48, 45); /* 				お腹のリボン(ハロウィン)		 */
+	--C003_MRibbon4C: rgb(81, 143, 19); /* 			お腹のリボン(クリスマス)		 */
+	--C003_MSkirt: rgb(215, 228, 76); /* 				スカート						 */
+	--C003_MSkirtH: rgb(248, 192, 61); /* 				スカート(ハロウィン)			 */
+	--C003_MSkirtC: rgb(245, 58, 20); /* 				スカート(クリスマス)			 */
+	--C003_MSkirtA: rgb(232, 222, 94); /* 				スカート(秋)					 */
+	--C004_MBorder1: rgb(83, 102, 28); /* 				袖のボーダー(外側)				 */
+	--C004_MBorder1H: rgb(64, 57, 60); /* 				袖のボーダー(外側・ハロウィン)	 */
+	--C004_MBorder1A: rgb(75, 60, 35); /* 				袖のボーダー(外側・クリスマス)	 */
+	--C004_MBorder2: rgb(149, 26, 23); /* 				袖のボーダー(内側)				 */
+	--C005_MCloth: rgb(254, 254, 245); /* 				？？？							 */
+	--C006_MEye: rgb(164, 151, 122); /* 				瞳色							 */
+	--C007_MHairOrnaments: rgb(235, 228, 208); /* 		髪飾り							 */
+	--C007_MHairOrnamentsA: rgb(215, 80, 51); /* 		髪飾り(秋)						 */
+	--C008_MSkin: rgb(255, 248, 228); /* 				肌色							 */
+	--C009_MSmallOfferingStand: rgb(218, 55, 32); /* 	三方(通常)						 */
+	--C009_MSmallOfferingStandH: rgb(92, 76, 79); /* 	三方(ハロウィン)				 */
+	--C009_MSmallOfferingStandA: rgb(178, 21, 120); /* 三方(秋)						 */
+
+	/* Color1xx : Japanese Traditional Colors */
+	--C101_KodaiMurasaki: rgb(137, 91, 138); /* 		古代紫							*/
+	--C102_TokiIro: rgb(244, 179, 194); /* 			鴇色							*/
+	--C103_KyoMurasaki: rgb(157, 91, 139); /* 			京紫							*/
+	--C104_Awabenihuji: rgb(230, 205, 227); /* 		淡紅藤							*/
+	--C105_WasurenagusaIro: rgb(44, 169, 225); /* 		勿忘草色						*/
+	--C106_SakuraIro: rgb(254, 244, 244); /* 			桜色							*/
+	--C107_NijiIro: rgb(246, 191, 188); /* 			虹色							*/
+	--C108_Ake: rgb(186, 38, 54); /* 					朱・緋							*/
+	--C109_TorinokoIro: rgb(255, 241, 207); /* 		鳥の子色						*/
+	--C110_KenpouIro: rgb(84, 63, 50); /* 				憲法色							*/
+	--C111_ChitoseMidori: rgb(49, 103, 69); /* 		千歳緑							*/
+	--C112_UsuAo: rgb(147, 182, 156); /* 				薄青							*/
+	--C113_NurebaIro: rgb(0, 11, 0); /* 				濡羽色							*/
+	--C114_AwahujiIro: rgb(187, 200, 230); /* 			淡藤色							*/
+	--C115_Shikkoku: rgb(13, 0, 21); /* 				漆黒							*/
+	--C116_UsuZakura: rgb(252, 240, 242); /*			薄桜							*/
+	--C117_GohunIro: rgb(255, 255, 252); /*			胡粉色							*/
+	--C118_Geppaku: rgb(234, 244, 252); /*				月白							*/
+	--C119_WakakusaIro: rgb(195, 216, 37); /*			若草色							*/
+	--C120_Hakuji: rgb(248, 251, 248); /*				白磁							*/
+	--C121_SoraIro: rgb(160, 216, 239); /*				空色							*/
+	--C122_Usukoubai: rgb(229, 151, 178); /*			薄紅梅							*/
+	/* Color1xx出典元 : https://www.colordic.org/w */
+
+	/* Color2xx : Japanese National Railways Colors */
+	--C201_MossGreen: rgb(36, 96, 41); /*				緑14号							 */
+	--C202_IvoryWhite: rgb(236, 224, 209); /*			クリーム10号					 */
+	--C203_OrangeVermilion: rgb(193, 101, 67); /*		朱色1号							 */
+	/* Color2xx出典元 : https://www.wikiwand.com/ja/%E5%9B%BD%E9%89%84%E8%89%B2 */
+
+	/* Color3xx : {data} Colors */
+}

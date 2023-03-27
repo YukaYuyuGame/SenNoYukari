@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>読み込み中...</title>
+		<script src="../js/FunctionsCollectionAPI.js"></script>
+		<script src="../js/index.js"></script>
+		<link rel="stylesheet" href="../css/CustomProperty.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body>
+		<nav class="navigator">
+			<ul>
+				<li><a href="./top.html">ホーム</a></li>
+				<li><a href="./story.html">物語</a></li>
+				<!-- <li><a href="./character.html">人物</a></li> -->
+				<li><a href="./product.html">情報</a></li>
+				<li><a href="./qa.html">質問</a></li>
+			</ul>
+		</nav>
+
+		<div class="main" id="product">
+			<!-- コンテンツ ここから -->
+			<div class="list head">
+				<p><img class="yuka_cap" src="../resources/sakura_icon.svg" /><span>製品</span></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p><span>製品名</span></p>
+				<p class="contents"><span class="game_title"></span></p>
+				<p class="sns"><a href="https://twitter.com/Sen_No_Yukari">Twitter</a></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p><span>種類</span></p>
+				<p class="contents" id="game_genre">シリアス恋愛泣ける系ゆかゆゆADV</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p><span>対応機種</span></p>
+				<p class="contents" id="game_moveenv">Windows版（Android版/iPhone版は未定）</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p><span>発売元</span></p>
+				<p class="contents" id="game_creater">『<span class="game_title"></span>』製作委員会</p>
+				<hr class="product" />
+			</div>
+
+			<br />
+			<div class="list head">
+				<p><img class="yuka_cap" src="../resources/sakura_icon.svg" /><span>素敵な幻想郷</span></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p><span>創造主</span></p>
+
+				<p class="contents" id="gensokyo">ZUN様（上海アリス幻樂団）</p>
+				<hr class="product" />
+			</div>
+
+			<br />
+			<div class="list head">
+				<p><img class="yuka_cap" src="../resources/sakura_icon.svg" /><span>出演</span></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>幽冥楼閣の亡霊少女</span></p>
+				<p class="contents name">西行寺幽々子</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>境界の妖怪</span></p>
+				<p class="contents name">八雲紫</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>半分幻の庭師</span></p>
+				<p class="contents name">魂魄妖夢</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>すきま妖怪の式</span></p>
+				<p class="contents name">八雲藍</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>すきま妖怪の式の式</span></p>
+				<p class="contents name">橙</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>楽園の素敵な巫女</span></p>
+				<p class="contents name">博麗霊夢</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>美しき雪月花の歌聖</span></p>
+				<p class="contents name">西行法師（佐藤義清）</p>
+				<p class="sns">オリジナルキャラクター</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>桜庭家のご令嬢</span></p>
+				<p class="contents name">桜庭悠子</p>
+				<p class="sns">オリジナルキャラクター</p>
+				<hr class="product" />
+			</div>
+
+			<br />
+			<div class="list head">
+				<p><img class="yuka_cap" src="../resources/sakura_icon.svg" /><span>制作陣</span></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>絵画制作</span></p>
+				<p class="contents nickname" id="art1">幽婉嫺雅な神の絵描き師</p>
+				<p class="contents name" id="art2">墨白たま。(あんちそうる。)</p>
+				<p class="sns"><a href="https://twitter.com/Sumishiro_8070">Twitter</a> | <a href="https://www.pixiv.net/users/54011004">Pixiv</a></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>脚本校閲+脚本制作支援</span></p>
+				<p class="contents nickname" id="help1">千紫万紅のコスプレイヤー</p>
+				<p class="contents name" id="help2">Takuto(第3戦術指揮棒)</p>
+				<p class="sns"><a href="https://twitter.com/kasenyukayuyu09">Twitter</a></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>脚本制作+製品制作+HP制作</span></p>
+				<p class="contents nickname" id="script1">ゆかゆゆガチ勢（初心者）</p>
+				<p class="contents name" id="script2">やえがきゆかり(桜咲くむらさきざくら)</p>
+				<p class="sns"><a href="https://twitter.com/Yaegaki_Yukari">Twitter</a> | <a href="https://www.pixiv.net/users/2998860">Pixiv</a></p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>キャラクター設定+脚本制作支援</span></p>
+				<p class="contents nickname" id="other1-1">九代目のサヴァン</p>
+				<p class="contents name" id="other1-2">稗田阿求</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>脚本制作支援</span></p>
+				<p class="contents nickname" id="other2-1">怨霊も恐れ怯む少女</p>
+				<p class="contents name" id="other2-2">古明地さとり</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>製品制作支援+小道具</span></p>
+				<p class="contents nickname" id="other3-1">水棲の技師</p>
+				<p class="contents name" id="other3-2">河城にとり</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>撮影</span></p>
+				<p class="contents nickname" id="other4-1">伝統の幻想ブン屋</p>
+				<p class="contents name" id="other4-2">射命丸文</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>撮影助手</span></p>
+				<p class="contents nickname" id="other5-1">今どきの念写記者</p>
+				<p class="contents name" id="other5-2">姫海棠はたて</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>脚本管理</span></p>
+				<p class="contents nickname" id="other6-1">判読眼のビブロフィリア</p>
+				<p class="contents name" id="other6-2">本居小鈴</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>衣装管理</span></p>
+				<p class="contents nickname" id="other7-1">七色の人形遣い</p>
+				<p class="contents name" id="other7-2">アリス・マーガトロイド</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>衣装管理助手+小道具制作助手</span></p>
+				<p class="contents nickname" id="other8-1">古道具屋のキュリオスフェロー</p>
+				<p class="contents name" id="other8-2">森近霖之助</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other9-1">騒霊ヴァイオリニスト</p>
+				<p class="contents name" id="other9-2">ルナサ・プリズムリバー</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other9-1">騒霊トランペッター</p>
+				<p class="contents name" id="other9-2">メルラン・プリズムリバー</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other9-1">騒霊キーボーディスト</p>
+				<p class="contents name" id="other9-2">リリカ・プリズムリバー</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other10-1">夜雀の怪</p>
+				<p class="contents name" id="other10-2">ミスティア・ローレライ</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other11-1">読経するヤマビコ</p>
+				<p class="contents name" id="other11-2">幽谷響子</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other12-1">古びた琵琶の付喪神</p>
+				<p class="contents name" id="other12-2">九十九弁々</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other12-1">古びた琴の付喪神</p>
+				<p class="contents name" id="other12-2">九十九八橋</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>音響</span></p>
+				<p class="contents nickname" id="other13-1">夢幻のパーカッショニスト</p>
+				<p class="contents name" id="other13-2">堀川雷鼓</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>照明</span></p>
+				<p class="contents nickname" id="other14-1">輝ける日の光</p>
+				<p class="contents name" id="other14-2">サニーミルク</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>照明助手</span></p>
+				<p class="contents nickname" id="other15-1">熱かい悩む神の火</p>
+				<p class="contents name" id="other15-2">霊烏路空</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>時間管理</span></p>
+				<p class="contents nickname" id="other16-1">完全で瀟洒なメイド</p>
+				<p class="contents name" id="other16-2">十六夜咲夜</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>生花管理</span></p>
+				<p class="contents nickname" id="other17-1">四季のフラワーマスター</p>
+				<p class="contents name" id="other17-2">風見幽香</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>小道具</span></p>
+				<p class="contents nickname" id="other18-1">普通の魔法使い</p>
+				<p class="contents name" id="other18-2">霧雨魔理沙</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>小道具</span></p>
+				<p class="contents nickname" id="other19-1">永遠に紅い幼き月</p>
+				<p class="contents name" id="other19-2">レミリア・スカーレット</p>
+				<hr class="product" />
+			</div>
+
+			<div class="list body">
+				<p class="type"><span>Special Thanks</span></p>
+				<p class="contents nickname" id="other20-1">幻想郷は心の中に。</p>
+				<p class="contents name" id="other20-2">東方創作を手がける全ての方々</p>
+				<hr class="product" />
+			</div>
+
+			<br />
+			<small id="hakugyokuro">※順不同、敬称略</small>
+			<!-- コンテンツ ここまで -->
+			<br />
+			<br />
+			<hr />
+			<br />
+			<p id="cautionText">
+				このHP内にて掲載されている画像・文章の全ての権利は『<span class="game_title"></span>』製作委員会にあります。<br />
+				無断で使用・転載する行為、AIへの機械学習やディープラーニング等の行為は禁止です。<br />
+				<br />
+				本ゲームは東方Projectの二次創作作品です。原作者様及び上海アリス幻樂団様とは一切関係ありません。<br />
+				<br />
+				Copyright 2022-2023 『<span class="game_title"></span>』製作委員会
+			</p>
+		</div>
+	</body>
+</html>

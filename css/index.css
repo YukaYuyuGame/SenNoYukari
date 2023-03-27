@@ -1,0 +1,336 @@
+@charset 'UTF-8';
+
+@media all {
+	* {
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		background-repeat: no-repeat;
+		font-family: 'UtsukushiFont', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+		margin: 0px;
+		outline: none;
+		/* overflow: hidden; */
+		padding: 0px;
+	}
+
+	body {
+		background-position: center center;
+
+		background-image: url('../resources/background.png');
+		background-attachment: fixed;
+		background-position-y: 0%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		opacity: 1;
+		position: absolute;
+		top: 0px;
+		width: 100%;
+
+		/*
+		display: inline-block;
+		background: linear-gradient(90deg, rgb(180, 76, 151, 0.5),rgb(137, 195, 235, 0.5) );
+		min-height: 100%;
+		min-width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+*/
+	}
+
+	nav.navigator {
+		background: #98aed8;
+
+		font-size: large;
+		box-shadow: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+		-webkit-box-shadow: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+		-moz-box-shadow: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+		z-index: 99;
+
+		position: absolute;
+		width: 100%;
+
+		top: 0;
+
+		/* height: 3.125em; */
+	}
+
+	nav.navigator ul {
+		display: flex;
+		margin: 0 auto;
+		padding: 0 3%;
+		width: 94%;
+		max-width: 960px;
+		list-style-type: none;
+		justify-content: center;
+	}
+	nav.navigator ul li {
+		position: relative;
+		width: 24.5%;
+	}
+	nav.navigator ul li:first-child::before {
+		position: absolute;
+		display: block;
+		content: '';
+		top: 25%;
+		left: 0px;
+		width: 1px;
+		height: 50%;
+		background-color: #da7674;
+	}
+	nav.navigator ul li::after {
+		position: absolute;
+		display: block;
+		content: '';
+		top: 25%;
+		right: 0px;
+		width: 1px;
+		height: 50%;
+		background-color: #db7fa8;
+	}
+	nav.navigator ul li a {
+		display: block;
+		padding: 17px 10px;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+	}
+	nav.navigator ul li a:hover {
+		background-color: #685397;
+	}
+
+	/* ----------------------------- */
+
+	div.main {
+		/* background-color: rgba(254, 254, 254, 0.65); */
+		background-color: rgba(254, 254, 254, 0.45);
+		box-shadow: 0px 1px 2px 1px rgba(13, 0, 21, 0.5);
+
+		position: absolute;
+		top: 56px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		overflow-y: auto;
+
+		z-index: 98;
+
+		padding: 12px;
+	}
+
+	@supports (backdrop-filter: blur(4px)) {
+		div.main {
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+		}
+	}
+
+	/* pc */
+	@media (min-width: 1001px) {
+		div.main {
+			margin: 0 12.5%;
+		}
+	}
+
+	/* mobile */
+	@media (max-width: 1000px) {
+		div.main {
+			margin: 0;
+		}
+	}
+
+	div.main hr {
+		height: 2.5px;
+		border: 0;
+		background-color: #8c98d8;
+	}
+
+	div.main hr:not(.product) {
+		margin: 0 10%;
+	}
+
+	div.main #cautionText {
+		font-size: small;
+		text-align: center;
+	}
+
+	/* ==========[story.html専用]========== */
+	div.main#story div#contentsText * {
+		color: #0d0015;
+		text-align: center;
+	}
+
+	/* ========[character.html専用]======== */
+	div.main#character div.Tab_Card .Tab_Header {
+		margin: 0px;
+		padding: 4px;
+	}
+	div.main#character div.Tab_Card .Tab_Header .Tab_Button {
+		text-align: center;
+
+		border-radius: var(--Shape_Radius);
+		float: left;
+		font-size: 24px;
+		margin: 4px;
+		margin-right: 0px;
+		padding: 8px;
+		transition: all 200ms ease;
+
+		background-color: var(--C117_GohunIro);
+		box-shadow: var(--Shadow_Normal_light);
+		color: var(--C113_NurebaIro);
+	}
+	div.main#character div.Tab_Card .Tab_Header .Tab_Button.active {
+		box-shadow: var(--Shadow_NotHover);
+	}
+	div.Tab_Card .Tab_Header .Tab_Button:hover {
+		background-color: var(--C117_GohunIro);
+	}
+
+	/*タブ切り替えの中身のスタイル*/
+	div.main#character div.Tab_Card .CardBody.CardBody_Tab {
+		clear: both;
+		overflow: hidden;
+	}
+
+	div.main#character div.character_area img {
+		width: 50%;
+	}
+
+	/* =========[product.html専用]========= */
+
+	div.main#product div.list.body,
+	div.main#product small#hakugyokuro {
+		margin-left: 60px;
+	}
+
+	div.main#product div.list.head p {
+		height: 60px;
+		line-height: 60px;
+	}
+
+	div.main#product div.list.body p {
+		height: 44px;
+		line-height: 44px;
+
+		float: left;
+	}
+
+	/* pc */
+	@media (min-width: 561px) {
+		div.main#product div.list.body p:not(.contents, .sns) {
+			width: 160px;
+		}
+		div.main#product div.list.body p.contents {
+			width: 480px;
+		}
+
+		div.main#product div.list.body p.nickname {
+			width: 240px;
+		}
+		div.main#product div.list.body p.name {
+			width: 260px;
+		}
+		div.main#product div.list.body p.type {
+			width: 320px;
+		}
+	}
+
+	/* mobile */
+	@media (max-width: 560px) {
+		div.main#product div.list.body p {
+			display: inline-table;
+		}
+		div.main#product div.list.body p:not(.contents, .sns) {
+			width: 100%;
+		}
+		div.main#product div.list.body p.name {
+			width: 100%;
+		}
+	}
+	/*
+	div.main#product div.list.body p.contents,
+	div.main#product div.list.body p.sns {
+		margin-left: 24px;
+	}
+*/
+	div.main#product div.list img.yuka_cap {
+		width: 56px;
+		height: 56px;
+	}
+
+	div.main#product div.list img.yuyu_cap {
+		width: 40px;
+		height: 40px;
+	}
+
+	div.main#product div.list span:not(.game_title) {
+		font-size: larger;
+		vertical-align: text-bottom;
+	}
+
+	div.main#product div.list.head span:not(.game_title) {
+		font-size: x-large;
+	}
+
+	div.main#product div.list.head hr.product {
+		background: transparent;
+		background-image: linear-gradient(to right, #695496, transparent);
+		height: 1px;
+		left: 0;
+		width: 50%;
+	}
+
+	div.main#product div.list.body hr.product {
+		background: transparent;
+		clear: both;
+
+		background-image: linear-gradient(to right, #8c98d8, transparent);
+		height: 1px;
+		left: 0;
+	}
+
+	/* =========[qa.html専用]========= */
+	div.main#qa div.list.body,
+	div.main#qa small#hakugyokuro {
+		margin-left: 60px;
+	}
+
+	div.main#qa div.list span {
+		vertical-align: text-bottom;
+	}
+
+	div.main#qa div.list.head p {
+		font-size: x-large;
+	}
+
+	div.main#qa div.list.body p {
+	}
+
+	div.main#qa div.list img.yuka_cap {
+		width: 31px;
+		height: 31px;
+		vertical-align: text-bottom;
+	}
+
+	div.main#qa div.list img.yuyu_cap {
+		width: 40px;
+		height: 40px;
+	}
+
+	div.main#qa div.list.head hr.product {
+		background: transparent;
+		background-image: linear-gradient(to right, #695496, transparent);
+		height: 1px;
+		left: 0;
+		width: 50%;
+	}
+
+	div.main#qa div.list.body hr.product {
+		background: transparent;
+		clear: both;
+
+		background-image: linear-gradient(to right, #8c98d8, transparent);
+		height: 1px;
+		left: 0;
+	}
+}
